@@ -536,7 +536,7 @@ sh_binary(
         "tmp/build",
         "--platform",
     ] + select({
-        "//src/conditions:darwin_x86_64": ["darwin_x86_64"],
+        "//src/conditions:darwin_x86_64": ["darwin"],
         "//src/conditions:darwin_arm64_constraint": ["darwin_arm64"],
         "//src/conditions:windows": ["windows"],
         "//src/conditions:linux": ["linux"],
