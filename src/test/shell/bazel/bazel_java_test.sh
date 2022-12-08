@@ -83,6 +83,7 @@ if [[ "${JAVA_TOOLS_PREBUILT_ZIP}" != "released" ]]; then
   inplace-sed "/override_repository=remote_java_tools_linux=/d" "$TEST_TMPDIR/bazelrc"
   inplace-sed "/override_repository=remote_java_tools_windows=/d" "$TEST_TMPDIR/bazelrc"
   inplace-sed "/override_repository=remote_java_tools_darwin=/d" "$TEST_TMPDIR/bazelrc"
+  inplace-sed "/override_repository=remote_java_tools_darwin_arm64=/d" "$TEST_TMPDIR/bazelrc"
 fi
 JAVA_TOOLS_PREBUILT_ZIP_FILE_URL=${JAVA_TOOLS_PREBUILT_ZIP_FILE_URL:-}
 
@@ -130,6 +131,10 @@ http_archive(
 )
 http_archive(
     name = "remote_java_tools_darwin",
+    urls = ["${JAVA_TOOLS_PREBUILT_ZIP_FILE_URL}"]
+)
+http_archive(
+    name = "remote_java_tools_darwin_arm64",
     urls = ["${JAVA_TOOLS_PREBUILT_ZIP_FILE_URL}"]
 )
 EOF
