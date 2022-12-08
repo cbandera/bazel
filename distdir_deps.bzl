@@ -429,6 +429,22 @@ DIST_DEPS = {
         ],
         "package_version": "11.9",
     },
+    "remote_java_tools_darwin_arm64": {
+        "aliases": [
+            "remote_java_tools_test_darwin_arm64",
+            "remote_java_tools_darwin_arm64_for_testing",
+        ],
+        "archive": "java_tools_darwin_arm64-v11.9.zip",
+        "sha256": "b9e962c6a836ba1d7573f2473fab3a897c6370d4c2724bde4017b40932ff4fe4",
+        "urls": [
+            "https://mirror.bazel.build/bazel_java_tools/releases/java/v11.9/java_tools_darwin_arm64-v11.9.zip",
+            "https://github.com/bazelbuild/java_tools/releases/download/java_v11.9/java_tools_darwin_arm64-v11.9.zip",
+        ],
+        "used_in": [
+            "test_WORKSPACE_files",
+        ],
+        "package_version": "11.9",
+    },
     "remotejdk11_linux": {
         "aliases": [
             "remotejdk11_linux_for_testing",
